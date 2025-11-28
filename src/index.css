@@ -1,0 +1,1137 @@
+/* ============================================
+   GOOGLE FONTS - Tipografías distintivas
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+@import "tailwindcss";
+
+/* ============================================
+   CSS CUSTOM PROPERTIES - Paleta de colores
+   ============================================ */
+:root {
+  /* Sage - Verde salvia (color principal) */
+  --sage-50: #f6f7f6;
+  --sage-100: #e3e7e3;
+  --sage-200: #c7d0c7;
+  --sage-300: #a3b2a3;
+  --sage-400: #7a8f7a;
+  --sage-500: #5d7260;
+  --sage-600: #4a5c4d;
+  --sage-700: #3d4a40;
+  --sage-800: #343d36;
+  --sage-900: #2c332e;
+  
+  /* Lavender - Lavanda suave */
+  --lavender-50: #faf8fc;
+  --lavender-100: #f3eef8;
+  --lavender-200: #e9e0f2;
+  --lavender-300: #d7c8e8;
+  --lavender-400: #bfa6d9;
+  --lavender-500: #a683c7;
+  --lavender-600: #8f66b3;
+  --lavender-700: #78539a;
+  --lavender-800: #64467e;
+  --lavender-900: #533c67;
+  
+  /* Cream - Crema cálido */
+  --cream-50: #fdfcf9;
+  --cream-100: #faf7f0;
+  --cream-200: #f4ede0;
+  --cream-300: #ebe0c9;
+  --cream-400: #deccab;
+  --cream-500: #d1b88f;
+  --cream-600: #c4a172;
+  --cream-700: #a8855e;
+  --cream-800: #896d50;
+  --cream-900: #715b44;
+  
+  /* Peach - Durazno suave */
+  --peach-50: #fef7f4;
+  --peach-100: #fdeee7;
+  --peach-200: #fbd9ca;
+  --peach-300: #f7bca3;
+  --peach-400: #f19572;
+  --peach-500: #e87149;
+  --peach-600: #d5542f;
+  --peach-700: #b24226;
+  --peach-800: #923824;
+  --peach-900: #783222;
+  
+  /* Stone - Gris piedra neutro */
+  --stone-50: #fafaf9;
+  --stone-100: #f5f5f4;
+  --stone-200: #e7e5e4;
+  --stone-300: #d6d3d1;
+  --stone-400: #a8a29e;
+  --stone-500: #78716c;
+  --stone-600: #57534e;
+  --stone-700: #44403c;
+  --stone-800: #292524;
+  --stone-900: #1c1917;
+
+    /* Colores extendidos para mejor contraste */
+  --sage-150: #e8ede8;
+  --sage-550: #657a68;
+  --sage-650: #536856;
+  
+  --lavender-150: #f0eaf7;
+  --lavender-550: #9474b8;
+  
+  --cream-150: #f8f3e8;
+  --cream-550: #b8a585;
+  
+  --stone-150: #f0efed;
+  --stone-550: #6d6864;
+  
+  /* Colores semánticos para estados */
+  --color-success: var(--sage-500);
+  --color-warning: var(--peach-500);
+  --color-error: #e53e3e;
+  --color-info: var(--lavender-500);
+  
+  /* Colores para textos con mejor contraste */
+  --text-primary: var(--stone-900);
+  --text-secondary: var(--stone-700);
+  --text-tertiary: var(--stone-500);
+  --text-inverse: var(--cream-50);
+
+
+  /* Sistema de espaciado consistente */
+  --section-spacing: clamp(4rem, 8vw, 8rem);
+  --element-spacing: clamp(2rem, 4vw, 4rem);
+  --component-spacing: clamp(1.5rem, 3vw, 3rem);
+  
+  /* Container widths */
+  --container-narrow: 1024px;
+  --container-wide: 1400px;
+}
+
+/* ============================================
+   TAILWIND CUSTOM THEME EXTENSION
+   ============================================ */
+@theme {
+  /* Colors */
+  --color-sage-50: var(--sage-50);
+  --color-sage-100: var(--sage-100);
+  --color-sage-200: var(--sage-200);
+  --color-sage-300: var(--sage-300);
+  --color-sage-400: var(--sage-400);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+  --color-sage-700: var(--sage-700);
+  --color-sage-800: var(--sage-800);
+  --color-sage-900: var(--sage-900);
+  
+  --color-lavender-50: var(--lavender-50);
+  --color-lavender-100: var(--lavender-100);
+  --color-lavender-200: var(--lavender-200);
+  --color-lavender-300: var(--lavender-300);
+  --color-lavender-400: var(--lavender-400);
+  --color-lavender-500: var(--lavender-500);
+  --color-lavender-600: var(--lavender-600);
+  --color-lavender-700: var(--lavender-700);
+  --color-lavender-800: var(--lavender-800);
+  --color-lavender-900: var(--lavender-900);
+  
+  --color-cream-50: var(--cream-50);
+  --color-cream-100: var(--cream-100);
+  --color-cream-200: var(--cream-200);
+  --color-cream-300: var(--cream-300);
+  --color-cream-400: var(--cream-400);
+  --color-cream-500: var(--cream-500);
+  --color-cream-600: var(--cream-600);
+  --color-cream-700: var(--cream-700);
+  --color-cream-800: var(--cream-800);
+  --color-cream-900: var(--cream-900);
+  
+  --color-peach-50: var(--peach-50);
+  --color-peach-100: var(--peach-100);
+  --color-peach-200: var(--peach-200);
+  --color-peach-300: var(--peach-300);
+  --color-peach-400: var(--peach-400);
+  --color-peach-500: var(--peach-500);
+  --color-peach-600: var(--peach-600);
+  --color-peach-700: var(--peach-700);
+  --color-peach-800: var(--peach-800);
+  --color-peach-900: var(--peach-900);
+  
+  --color-stone-50: var(--stone-50);
+  --color-stone-100: var(--stone-100);
+  --color-stone-200: var(--stone-200);
+  --color-stone-300: var(--stone-300);
+  --color-stone-400: var(--stone-400);
+  --color-stone-500: var(--stone-500);
+  --color-stone-600: var(--stone-600);
+  --color-stone-700: var(--stone-700);
+  --color-stone-800: var(--stone-800);
+  --color-stone-900: var(--stone-900);
+  
+  /* Fonts */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-scroll: scroll 2s ease-in-out infinite;
+  --animate-spin-slow: spin 20s linear infinite;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--stone-700);
+  line-height: 1.8; /* Aumentado de 1.7 */
+  background-color: var(--cream-50);
+  overflow-x: hidden;
+  font-size: 1.125rem; /* Tamaño base aumentado */
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+.font-display {
+  font-family: var(--font-display);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.3; /* Aumentado de 1.2 */
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem; /* Añadido espacio después de títulos */
+}
+
+h1 {
+  font-size: clamp(3rem, 6vw, 5rem); /* Aumentado */
+}
+
+h2 {
+  font-size: clamp(2.25rem, 4.5vw, 4rem); /* Aumentado */
+}
+
+h3 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem); /* Aumentado */
+}
+
+p {
+  font-family: var(--font-sans);
+  line-height: 1.8;
+  font-size: 1.125rem; /* Aumentado de ~1rem */
+  margin-bottom: 1.5rem; /* Añadido espacio entre párrafos */
+}
+
+
+/* ============================================
+   ANIMATIONS & KEYFRAMES
+   ============================================ */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+}
+
+@keyframes scroll {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Animation utilities */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-scroll {
+  animation: scroll 2s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.6s ease-out forwards;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+/* ============================================
+   FOCUS & ACCESSIBILITY
+   ============================================ */
+:focus-visible {
+  outline: 3px solid var(--sage-400);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--sage-600);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0 0 8px 8px;
+  z-index: 9999;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   INTERACTIVE ELEMENTS
+   ============================================ */
+button, a {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Custom cursor for interactive elements */
+button, a, [role="button"] {
+  cursor: pointer;
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+input, textarea, select {
+  font-family: var(--font-sans);
+  font-size: 16px; /* Prevents zoom on iOS */
+  transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--stone-400);
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(93, 114, 96, 0.2);
+}
+
+/* ============================================
+   IMAGES
+   ============================================ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Lazy loading placeholder */
+img[loading="lazy"] {
+  background: linear-gradient(135deg, var(--sage-100) 0%, var(--cream-100) 100%);
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sage-300);
+  border-radius: 5px;
+  border: 2px solid var(--cream-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage-400);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sage-300) var(--cream-100);
+}
+
+/* ============================================
+   SELECTION STYLING
+   ============================================ */
+::selection {
+  background: var(--sage-200);
+  color: var(--sage-900);
+}
+
+::-moz-selection {
+  background: var(--sage-200);
+  color: var(--sage-900);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--sage-600) 0%, var(--lavender-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Soft shadows */
+.shadow-soft {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-medium {
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.08),
+    0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-elevated {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    0 12px 24px -8px rgba(0, 0, 0, 0.08);
+}
+
+/* Colored shadows */
+.shadow-sage {
+  box-shadow: 0 20px 40px -10px rgba(93, 114, 96, 0.3);
+}
+
+.shadow-lavender {
+  box-shadow: 0 20px 40px -10px rgba(166, 131, 199, 0.3);
+}
+
+/* Noise texture overlay */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* Organic blob shapes */
+.blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.blob-2 {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+/* Espaciado de secciones */
+.section-spacing {
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+.section-spacing-top {
+  padding-top: var(--section-spacing);
+}
+
+.section-spacing-bottom {
+  padding-bottom: var(--section-spacing);
+}
+
+/* Espaciado de elementos */
+.element-spacing {
+  margin-bottom: var(--element-spacing);
+}
+
+.element-spacing-top {
+  margin-top: var(--element-spacing);
+}
+
+/* Containers especializados */
+.container-narrow {
+  max-width: var(--container-narrow);
+}
+
+.container-wide {
+  max-width: var(--container-wide);
+}
+
+/* Utilidades de texto con mejor contraste */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.text-inverse {
+  color: var(--text-inverse);
+}
+
+/* Estados de hover mejorados */
+.hover-lift-refined {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift-refined:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px -8px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   Z-INDEX LAYERS
+   ============================================ */
+.-z-10 { z-index: -10; }
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  a, a:visited {
+    text-decoration: underline;
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  @page {
+    margin: 2cm;
+  }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (opcional)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  /* Uncomment to enable dark mode
+  :root {
+    --cream-50: #1c1917;
+    --stone-800: #fafaf9;
+    --stone-700: #f5f5f4;
+    --stone-500: #a8a29e;
+  }
+  
+  body {
+    background-color: var(--stone-900);
+    color: var(--stone-200);
+  }
+  */
+}
+
+/* ============================================
+   HOVER EFFECTS
+   ============================================ */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
+}
+
+.hover-glow {
+  transition: box-shadow 0.4s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 40px rgba(93, 114, 96, 0.3);
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--stone-200) 0%,
+    var(--stone-100) 50%,
+    var(--stone-200) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* ============================================
+   SPECIAL COMPONENTS
+   ============================================ */
+
+/* Decorative line */
+.decorative-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--sage-300), transparent);
+}
+
+/* Quote marks */
+.quote-mark {
+  font-family: var(--font-display);
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--sage-100);
+}
+
+/* Pill badge */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--sage-100);
+  color: var(--sage-700);
+}
+
+/* Card with hover effect */
+.card-interactive {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-interactive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(93, 114, 96, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card-interactive:hover::before {
+  opacity: 1;
+}
+
+.card-interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   SPARKLING EFFECTS - Efectos de brillo
+   ============================================ */
+.sparkle-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkleFloat 2s ease-out forwards;
+  box-shadow: 
+    0 0 8px 2px rgba(255, 255, 255, 0.8),
+    0 0 16px 4px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes sparkleFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.2);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(-30px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0);
+  }
+}
+
+/* Efecto de brillo sutil para la imagen */
+.image-glow {
+  filter: 
+    drop-shadow(0 0 20px rgba(166, 131, 199, 0.3))
+    drop-shadow(0 0 40px rgba(93, 114, 96, 0.2))
+    drop-shadow(0 0 60px rgba(255, 255, 255, 0.1));
+}
+
+/* Partículas doradas para un efecto más mágico */
+.gold-sparkle {
+  background: linear-gradient(45deg, #FFD700, #FFF9C4);
+  box-shadow: 
+    0 0 12px 3px rgba(255, 215, 0, 0.6),
+    0 0 20px 6px rgba(255, 249, 196, 0.4);
+}
+
+/* ============================================
+   HEART ICON - Corazón violeta elegante
+   ============================================ */
+
+.heart-icon  {
+  display: inline-block;
+  animation: pulse-soft 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px rgba(166, 131, 199, 0.4));
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY - FUENTES MÁS GRANDES
+   ============================================ */
+
+/* Tamaños base más grandes para móvil */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.125rem; /* 18px base en móvil */
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 7vw, 3rem) !important;
+    line-height: 1.3 !important;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 6vw, 2.25rem) !important;
+  }
+
+  p, li, .text-lg {
+    font-size: 1.125rem !important; /* 18px */
+    line-height: 1.7 !important;
+  }
+
+  .text-xl {
+    font-size: 1.25rem !important; /* 20px */
+  }
+
+  /* Espaciado mejorado para móvil */
+  .section-spacing {
+    padding-top: clamp(3rem, 6vw, 4rem) !important;
+    padding-bottom: clamp(3rem, 6vw, 4rem) !important;
+  }
+
+  /* Contenedores más ajustados */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* ============================================
+   LAYOUT FIXES PARA MÓVIL
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Grids que deben ser de 1 columna */
+  .grid-cols-2,
+  .lg\:grid-cols-2,
+  .md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Hero Section fixes */
+  .hero-image-container {
+    order: -1 !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Ocultar elementos decorativos problemáticos en móvil */
+  .floating-badge,
+  .absolute.-top-6,
+  .absolute.-bottom-6 {
+    display: none !important;
+  }
+
+  /* Padding reducido en cards */
+  .rounded-3xl, .p-8 {
+    padding: 1.5rem !important;
+  }
+
+  /* Botones de ancho completo en móvil */
+  .sm\:flex-row {
+    flex-direction: column !important;
+  }
+  
+  .sm\:flex-row > * {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* ============================================
+   MEJORAS ESPECÍFICAS POR COMPONENTE
+   ============================================ */
+
+/* BenefitsSection - Imagen más pequeña en móvil */
+@media (max-width: 768px) {
+  .rounded-\[4rem\] {
+    border-radius: 2rem !important;
+  }
+}
+
+/* PainPointsSection - Orden correcto en móvil */
+@media (max-width: 1024px) {
+  .lg\:order-1, 
+  .lg\:order-2 {
+    order: 0 !important;
+  }
+}
+
+/* Testimonials - Cards más compactas */
+@media (max-width: 768px) {
+  .testimonial-card {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* ============================================
+   MEJORAS DE ACCESIBILIDAD Y LEGIBILIDAD
+   ============================================ */
+
+/* Mejor contraste para textos */
+.text-stone-600,
+.text-stone-500 {
+  color: var(--stone-700) !important;
+}
+
+/* Espaciado entre párrafos mejorado */
+p + p {
+  margin-top: 1.5rem;
+}
+
+/* Links más legibles */
+a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Inputs más grandes en móvil */
+@media (max-width: 768px) {
+  input, textarea {
+    font-size: 16px !important; /* Previene zoom en iOS */
+    min-height: 48px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-image-container img {
+    max-width: 280px !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-image {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+  
+  .rounded-\[4rem\] {
+    border-radius: 1.5rem !important;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .pain-point-item {
+    margin-bottom: 3rem;
+  }
+  
+  .pain-point-image {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-height: auto !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-text {
+    font-size: 1.125rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* ============================================
+   MOBILE FIRST FIXES
+   ============================================ */
+@media (max-width: 768px) {
+  /* Espaciado general mejorado */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Textos más grandes y legibles */
+  body {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+  
+  p, li {
+    font-size: 1.125rem !important;
+    line-height: 1.7 !important;
+  }
+  
+  /* Headers responsivos */
+  h1 {
+    font-size: clamp(2.25rem, 8vw, 3rem) !important;
+    line-height: 1.2 !important;
+  }
+  
+  h2 {
+    font-size: clamp(1.875rem, 7vw, 2.5rem) !important;
+    line-height: 1.3 !important;
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+  }
+  
+  /* Botones de ancho completo en móvil */
+  .flex-col > button,
+  .sm\:flex-row > button {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+  
+  /* Padding reducido en cards */
+  .p-8 {
+    padding: 1.5rem !important;
+  }
+  
+  .rounded-3xl {
+    border-radius: 1.5rem !important;
+  }
+}
+
+/* Para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ============================================
+   FIXES PARA NAVEGACIÓN ENTRE PÁGINAS
+   ============================================ */
+
+/* Forzar que el body sea visible inmediatamente */
+body {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Prevenir flashes de estilos no cargados */
+.min-h-screen {
+  min-height: 100vh !important;
+}
+
+.container {
+  opacity: 1 !important;
+}
+
+/* Reset de animaciones durante la carga inicial */
+.initial-load * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* Remover la clase después de un breve momento */
+@media (prefers-reduced-motion: no-preference) {
+  .initial-load {
+    animation: removeInitialLoad 0.1s forwards;
+  }
+  
+  @keyframes removeInitialLoad {
+    to {
+      opacity: 1;
+    }
+  }
+}
+
