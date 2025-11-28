@@ -18,12 +18,12 @@ const CONFIG = {
     name: 'Erika Spaerer',
     title: 'Mindfulness Mentor & Life Coach',
     instagram: '@escoachingymindfulness',
-    image: '/erika.png'
+    image: 'erika.png'
   },
   book: {
     title: 'Despierta tu Calma Interior',
     subtitle: '5 claves para cultivar tu calma mental en un mundo acelerado',
-    image: '/book.png'
+    image: 'book.png'
   }
 };
 
@@ -33,19 +33,19 @@ const PAIN_POINTS = [
     id: 1,
     title: 'Tu mente va de un pensamiento a otro sin descanso',
     description: 'Es porque estás atrapado en la rumiación, ese ciclo incesante de pensamientos repetitivos. En esta guía aprenderás a anclarte en el presente usando tus sentidos.',
-    image: '/meditate1.png'
+    image: 'meditate1.png'
   },
   {
     id: 2,
     title: 'Reaccionas de forma desproporcionada y no sabes por qué',
     description: 'Has perdido conexión con tus emociones en el momento en que aparecen. Este material te acompaña a reconocer lo que sientes sin juzgarte.',
-    image: '/meditate2.png'
+    image: 'meditate2.png'
   },
   {
     id: 3,
     title: 'Vives en piloto automático y se te escapa el presente',
     description: 'La prisa y la distracción han tomado el control. Esta guía te invita a despertar con intención y volver a ti a través de prácticas simples.',
-    image: '/meditate3.png'
+    image: 'meditate3.png'
   }
 ];
 

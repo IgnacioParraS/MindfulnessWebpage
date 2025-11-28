@@ -6,7 +6,7 @@ const Footer = ({ config }) => {
       {/* Fondo con imagen */}
       <div className="absolute inset-0">
         <img 
-          src="/meditate4.png" 
+          src="meditate4.png" 
           alt="Fondo meditación" 
           className="w-full h-full object-cover"
         />
@@ -45,7 +45,7 @@ const Footer = ({ config }) => {
             >
               <span className="sr-only">Instagram</span>
               <img 
-                src="/instagram.png" 
+                src="instagram.png" 
                 alt="Instagram" 
                 className="w-7 h-7 object-contain transition-transform duration-500 group-hover:scale-110"
               />
@@ -60,7 +60,7 @@ const Footer = ({ config }) => {
               en Chile
             </p>
             <a 
-              href="/privacidad" 
+              href="/MindfulnessWebpage/#/privacidad"
               className="inline-block text-cream-200 hover:text-white transition-all duration-300 text-sm font-medium hover:underline underline-offset-4"
             >
               Política de Privacidad

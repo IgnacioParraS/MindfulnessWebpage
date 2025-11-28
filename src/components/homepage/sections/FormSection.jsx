@@ -119,7 +119,7 @@ const FormSection = ({ formRef }) => {
                 <p className="text-xs text-stone-500 text-center">
                   Al suscribirte aceptas nuestra{' '}
                  <a 
-                    href="/privacidad" 
+                    href="/MindfulnessWebpage/#/privacidad"
                     className="underline hover:text-stone-400 transition-colors duration-300"
                   >
                     política de privacidad

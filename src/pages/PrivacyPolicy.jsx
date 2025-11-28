@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-
+import { Link } from 'react-router-dom';
 const PrivacyPolicy = () => {
   useEffect(() => {
     // Fix para navegación entre páginas
@@ -14,15 +14,16 @@ const PrivacyPolicy = () => {
       {/* Header */}
       <header className="relative py-12 lg:py-24 bg-gradient-to-br from-sage-600 to-sage-700 text-white overflow-hidden">
         <div className="absolute top-4 left-4 lg:top-6 lg:left-6 z-20">
-          <a 
-            href="/"
+          {/* CAMBIAR ESTAS 9 LÍNEAS: */}
+          <Link 
+            to="/"  // <-- Cambiar href por to
             className="group flex items-center gap-2 text-sage-100 hover:text-white transition-colors duration-300"
           >
             <svg className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             <span className="font-display italic text-sm lg:text-base">Volver al inicio</span>
-          </a>
+          </Link>
         </div>
           
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-8 lg:pt-0">

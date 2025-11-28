@@ -112,7 +112,7 @@ const HeroSection = ({ onScrollToForm, config }) => {
                 {/* Imagen principal */}
                 <div className="relative w-32 h-32 rounded-2xl bg-white/95 backdrop-blur-sm shadow-2xl p-3 border-2 border-sage-100/50">
                   <img 
-                    src="/5ideas.png" 
+                    src="5ideas.png" 
                     alt="5 ideas prácticas" 
                     className="w-full h-full object-contain"
                   />
@@ -132,7 +132,7 @@ const HeroSection = ({ onScrollToForm, config }) => {
                 {/* Imagen principal */}
                 <div className="relative w-32 h-32 rounded-2xl bg-white/95 backdrop-blur-sm shadow-2xl p-3 border-2 border-lavender-100/50">
                   <img 
-                    src="/10minutes.png" 
+                    src="10minutes.png" 
                     alt="10 minutos por día" 
                     className="w-full h-full object-cover rounded-lg"
                   />
